@@ -5,6 +5,7 @@ format:
     theme: cosmo
     toc: true
     code-fold: true
+    embed-resources: true
 ---
 
 ```{r}
