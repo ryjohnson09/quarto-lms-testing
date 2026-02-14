@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto render output
+penguins.html
+penguins_files/

@@ -1,0 +1,143 @@
+---
+title: "Palmer Penguins Explorer"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+---
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+library(palmerpenguins)
+library(ggplot2)
+library(dplyr)
+library(gt)
+```
+
+## Overview
+
+The [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) dataset contains measurements for `r nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
+
+## Plot
+
+```{r}
+#| label: fig-scatter
+#| fig-cap: "Flipper length vs. body mass by species"
+#| warning: false
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, shape = species)) +
+  geom_point(size = 2.5, alpha = 0.7) +
+  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
+  labs(
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)",
+    color = "Species",
+    shape = "Species"
+  ) +
+  theme_minimal()
+```
+
+## Summary Table
+
+```{r}
+#| label: tbl-summary
+
+penguins |>
+  filter(!is.na(body_mass_g)) |>
+  group_by(species) |>
+  summarise(
+    Count = n(),
+    `Mean Body Mass (g)` = round(mean(body_mass_g), 0),
+    `Mean Flipper Length (mm)` = round(mean(flipper_length_mm, na.rm = TRUE), 1),
+    `Mean Bill Length (mm)` = round(mean(bill_length_mm, na.rm = TRUE), 1),
+    `Mean Bill Depth (mm)` = round(mean(bill_depth_mm, na.rm = TRUE), 1)
+  ) |>
+  gt() |>
+  tab_header(
+    title = "Penguin Species Summary",
+    subtitle = "Averages across all islands"
+  ) |>
+  cols_label(species = "Species") |>
+  tab_source_note("Source: palmerpenguins R package")
+```
+
+## Details by Island
+
+::: {.panel-tabset}
+
+### Biscoe
+
+```{r}
+#| warning: false
+penguins |>
+  filter(island == "Biscoe") |>
+  ggplot(aes(x = species, y = body_mass_g, fill = species)) +
+  geom_boxplot(alpha = 0.7, show.legend = FALSE) +
+  scale_fill_manual(values = c("darkorange", "cyan4")) +
+  labs(x = NULL, y = "Body Mass (g)") +
+  theme_minimal()
+```
+
+### Dream
+
+```{r}
+#| warning: false
+penguins |>
+  filter(island == "Dream") |>
+  ggplot(aes(x = species, y = body_mass_g, fill = species)) +
+  geom_boxplot(alpha = 0.7, show.legend = FALSE) +
+  scale_fill_manual(values = c("darkorange", "purple")) +
+  labs(x = NULL, y = "Body Mass (g)") +
+  theme_minimal()
+```
+
+### Torgersen
+
+```{r}
+#| warning: false
+penguins |>
+  filter(island == "Torgersen") |>
+  ggplot(aes(x = species, y = body_mass_g, fill = species)) +
+  geom_boxplot(alpha = 0.7, show.legend = FALSE) +
+  scale_fill_manual(values = c("darkorange")) +
+  labs(x = NULL, y = "Body Mass (g)") +
+  theme_minimal()
+```
+
+:::
+
+## About the Data
+
+<details>
+<summary>**Click to expand: Data collection details**</summary>
+
+The Palmer Penguins dataset was collected by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pallter.marine.rutgers.edu/), a member of the Long Term Ecological Research Network. The data were collected from 2007--2009 and include the following variables:
+
+- **species**: Adelie, Chinstrap, or Gentoo
+- **island**: Biscoe, Dream, or Torgersen
+- **bill_length_mm**: Length of the bill (mm)
+- **bill_depth_mm**: Depth of the bill (mm)
+- **flipper_length_mm**: Flipper length (mm)
+- **body_mass_g**: Body mass (g)
+- **sex**: Male or Female
+- **year**: Study year (2007, 2008, or 2009)
+
+This dataset is commonly used as an alternative to the `iris` dataset for data exploration and visualization examples.
+
+</details>
+
+<details>
+<summary>**Click to expand: Missing values**</summary>
+
+```{r}
+penguins |>
+  summarise(across(everything(), ~ sum(is.na(.)))) |>
+  gt() |>
+  tab_header(title = "Missing Values per Column")
+```
+
+</details>
