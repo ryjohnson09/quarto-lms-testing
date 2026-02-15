@@ -3,18 +3,7 @@ project:
 
 website:
   title: "Quarto LMS Testing"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: penguins.qmd
-        text: Penguins
-      - href: webr.qmd
-        text: WebR
-      - href: shinylive.qmd
-        text: Shinylive
-      - href: quiz.qmd
-        text: Quiz
+  navbar: false
 
 format:
   html:
