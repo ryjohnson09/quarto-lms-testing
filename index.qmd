@@ -1,12 +1,70 @@
 ---
 title: "Quarto LMS Testing"
+toc: false
 ---
 
-Test pages for embedding Quarto content in Skilljar.
+::: {.lesson-hero}
+# Quarto LMS Testing
+::: {.lead}
+Exploring interactive Quarto features for embedding in Skilljar.
+:::
+:::
 
-| Page | Feature | Description |
-|------|---------|-------------|
-| [Penguins](penguins.qmd) | Static R output | ggplot2, gt tables, tabsets |
-| [WebR](webr.qmd) | WebR | Interactive R code in the browser |
-| [Shinylive](shinylive.qmd) | Shinylive | Shiny apps running client-side |
-| [Quiz](quiz.qmd) | Quiz questions | Interactive quiz / knowledge checks |
+## Test Pages
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+<a href="penguins.html" class="card-link">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Palmer Penguins Explorer</h5>
+<p class="card-text">Static R output with ggplot2 plots, gt summary tables, and Bootstrap tabsets.</p>
+<span class="badge-feature badge-static">Static R</span>
+<span class="badge-feature badge-static">ggplot2</span>
+<span class="badge-feature badge-static">gt</span>
+</div>
+</div>
+</a>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<a href="webr.html" class="card-link">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">WebR Demo</h5>
+<p class="card-text">Run and edit R code directly in the browser -- no server or installation needed.</p>
+<span class="badge-feature badge-interactive">Interactive</span>
+<span class="badge-feature badge-interactive">WebR</span>
+</div>
+</div>
+</a>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<a href="shinylive.html" class="card-link">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Shinylive Demo</h5>
+<p class="card-text">A fully client-side Shiny app with reactive sliders and live plots.</p>
+<span class="badge-feature badge-shiny">Shiny</span>
+<span class="badge-feature badge-shiny">Client-side</span>
+</div>
+</div>
+</a>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<a href="quiz.html" class="card-link">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title">Quiz Demo</h5>
+<p class="card-text">Interactive knowledge checks with live code editors and collapsible answers.</p>
+<span class="badge-feature badge-quiz">Quiz</span>
+<span class="badge-feature badge-interactive">WebR</span>
+</div>
+</div>
+</a>
+:::
+
+:::

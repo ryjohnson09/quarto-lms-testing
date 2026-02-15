@@ -2,6 +2,23 @@
 title: "Palmer Penguins Explorer"
 ---
 
+::: {.lesson-hero}
+# Palmer Penguins Explorer
+::: {.lead}
+Exploring penguin measurements across species and islands in Antarctica.
+:::
+<span class="badge-feature badge-static">ggplot2</span>
+<span class="badge-feature badge-static">gt tables</span>
+<span class="badge-feature badge-static">Tabsets</span>
+:::
+
+::: {.learning-objectives}
+#### Learning Objectives
+- Visualize relationships between penguin body measurements
+- Compare species distributions across islands using plots and tables
+- Explore grouped summaries with interactive tabsets
+:::
+
 ```{r}
 #| label: setup
 #| message: false
@@ -17,7 +34,15 @@ library(gt)
 
 The [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) dataset contains measurements for `r nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
 
-## Plot
+<hr class="section-divider">
+
+## Scatter Plot
+
+<div class="card">
+<div class="card-header">
+Flipper Length vs. Body Mass
+</div>
+<div class="card-body">
 
 ```{r}
 #| label: fig-scatter
@@ -36,7 +61,18 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, sh
   theme_minimal()
 ```
 
+</div>
+</div>
+
+<hr class="section-divider">
+
 ## Summary Table
+
+<div class="card">
+<div class="card-header">
+Species Averages
+</div>
+<div class="card-body">
 
 ```{r}
 #| label: tbl-summary
@@ -59,6 +95,11 @@ penguins |>
   cols_label(species = "Species") |>
   tab_source_note("Source: palmerpenguins R package")
 ```
+
+</div>
+</div>
+
+<hr class="section-divider">
 
 ## Details by Island
 
@@ -105,10 +146,19 @@ penguins |>
 
 :::
 
+<hr class="section-divider">
+
 ## About the Data
 
-<details>
-<summary>**Click to expand: Data collection details**</summary>
+<div class="accordion" id="aboutAccordion">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCollection">
+Data Collection Details
+</button>
+</h2>
+<div id="collapseCollection" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+<div class="accordion-body">
 
 The Palmer Penguins dataset was collected by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pallter.marine.rutgers.edu/), a member of the Long Term Ecological Research Network. The data were collected from 2007--2009 and include the following variables:
 
@@ -123,10 +173,17 @@ The Palmer Penguins dataset was collected by [Dr. Kristen Gorman](https://www.ua
 
 This dataset is commonly used as an alternative to the `iris` dataset for data exploration and visualization examples.
 
-</details>
-
-<details>
-<summary>**Click to expand: Missing values**</summary>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMissing">
+Missing Values
+</button>
+</h2>
+<div id="collapseMissing" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+<div class="accordion-body">
 
 ```{r}
 penguins |>
@@ -135,4 +192,7 @@ penguins |>
   tab_header(title = "Missing Values per Column")
 ```
 
-</details>
+</div>
+</div>
+</div>
+</div>

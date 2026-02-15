@@ -1,0 +1,48 @@
+meta:
+  name: "Quarto LMS Testing"
+
+color:
+  palette:
+    white: "#ffffff"
+    off-white: "#f7f7f7"
+    light-blue: "#E5F0FC"
+    posit-blue: "#447099"
+    posit-teal: "#297075"
+    posit-green: "#72994E"
+    posit-mauve: "#9A4665"
+    dark-blue: "#213D4F"
+    charcoal: "#17212B"
+    amber: "#e9a419"
+    red: "#d14a3e"
+  foreground: charcoal
+  background: white
+  primary: posit-blue
+  secondary: dark-blue
+  tertiary: posit-teal
+  success: posit-green
+  info: posit-teal
+  warning: amber
+  danger: red
+  light: off-white
+  dark: charcoal
+
+typography:
+  fonts:
+    - family: Open Sans
+      source: google
+    - family: Source Code Pro
+      source: google
+  base:
+    family: Open Sans
+    size: 1rem
+    line-height: 1.65
+  headings:
+    family: Open Sans
+    weight: 600
+    color: dark-blue
+    line-height: 1.3
+  monospace:
+    family: Source Code Pro
+    size: 0.875em
+  link:
+    color: posit-teal

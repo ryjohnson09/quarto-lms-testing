@@ -5,9 +5,33 @@ filters:
   - webr
 ---
 
+::: {.lesson-hero}
+# WebR Demo
+::: {.lead}
+Write and run R code directly in your browser -- no installation required.
+:::
+<span class="badge-feature badge-interactive">Interactive</span>
+<span class="badge-feature badge-interactive">WebR</span>
+:::
+
+::: {.learning-objectives}
+#### Learning Objectives
+- Understand how WebR runs R code client-side in the browser
+- Practice creating scatter plots and fitting linear models
+- Interpret regression output from `summary(lm(...))`
+:::
+
 ## Interactive R in the Browser
 
 Edit and run the code below -- it executes entirely in your browser via [WebR](https://docs.r-wasm.org/webr/latest/).
+
+<hr class="section-divider">
+
+### <span class="step-number">1</span> Generate & Plot Data
+
+<div class="card">
+<div class="card-header">Scatter Plot with Regression Line</div>
+<div class="card-body">
 
 ```{webr-r}
 # Try changing the number of points
@@ -21,8 +45,27 @@ plot(x, y, pch = 19, col = "steelblue",
 abline(lm(y ~ x), col = "red", lwd = 2)
 ```
 
+</div>
+</div>
+
+<hr class="section-divider">
+
+### <span class="step-number">2</span> Inspect the Model
+
+<div class="card">
+<div class="card-header">Regression Summary</div>
+<div class="card-body">
+
 ```{webr-r}
 # Summary statistics
 fit <- lm(y ~ x)
 summary(fit)
 ```
+
+</div>
+</div>
+
+::: {.try-it}
+#### Try It Yourself
+Change `n` to `500` in the first code block and re-run both cells. How does the R-squared value change with more data?
+:::
