@@ -3,5 +3,9 @@
 .RData
 .Ruserdata
 
-# Quarto render output
-penguins_files/
+# Quarto website output
+_site/
+_freeze/
+*_files/
+
+/.quarto/

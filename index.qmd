@@ -1,0 +1,12 @@
+---
+title: "Quarto LMS Testing"
+---
+
+Test pages for embedding Quarto content in Skilljar.
+
+| Page | Feature | Description |
+|------|---------|-------------|
+| [Penguins](penguins.qmd) | Static R output | ggplot2, gt tables, tabsets |
+| [WebR](webr.qmd) | WebR | Interactive R code in the browser |
+| [Shinylive](shinylive.qmd) | Shinylive | Shiny apps running client-side |
+| [Quiz](quiz.qmd) | Quiz questions | Interactive quiz / knowledge checks |

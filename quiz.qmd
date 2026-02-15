@@ -1,0 +1,76 @@
+---
+title: "Quiz Demo"
+filters:
+  - webr
+---
+
+## Knowledge Check
+
+Test your understanding with the questions below.
+
+::: {.callout-note appearance="simple"}
+## Question 1
+
+What function in R creates a sequence of integers from 1 to 10?
+
+```{webr-r}
+# Write your answer below and run it.
+# The output should be: 1 2 3 4 5 6 7 8 9 10
+
+```
+
+::: {.callout-tip collapse="true"}
+## Show answer
+
+```r
+1:10
+# or
+seq(1, 10)
+```
+:::
+:::
+
+::: {.callout-note appearance="simple"}
+## Question 2
+
+Using base R, calculate the mean of the vector `c(4, 8, 15, 16, 23, 42)`.
+
+```{webr-r}
+# Write your answer below
+
+
+```
+
+::: {.callout-tip collapse="true"}
+## Show answer
+
+```r
+mean(c(4, 8, 15, 16, 23, 42))
+# Answer: 18
+```
+:::
+:::
+
+::: {.callout-note appearance="simple"}
+## Question 3
+
+Create a data frame with two columns: `name` (with values "Alice", "Bob", "Carol") and `score` (with values 90, 85, 92). Then filter to only rows where score > 88.
+
+```{webr-r}
+# Write your answer below
+
+
+```
+
+::: {.callout-tip collapse="true"}
+## Show answer
+
+```r
+df <- data.frame(
+  name = c("Alice", "Bob", "Carol"),
+  score = c(90, 85, 92)
+)
+df[df$score > 88, ]
+```
+:::
+:::

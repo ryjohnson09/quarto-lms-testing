@@ -1,23 +1,5 @@
 ---
 title: "Palmer Penguins Explorer"
-format:
-  html:
-    theme: cosmo
-    toc: true
-    code-fold: true
-    embed-resources: true
-include-after-body:
-  - text: |
-      <script>
-      const sendHeight = () => {
-        window.parent.postMessage(
-          { type: 'iframeResize', height: document.body.scrollHeight },
-          '*'
-        );
-      };
-      new ResizeObserver(sendHeight).observe(document.body);
-      sendHeight();
-      </script>
 ---
 
 ```{r}

@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "Quarto LMS Testing"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: penguins.qmd
+        text: Penguins
+      - href: webr.qmd
+        text: WebR
+      - href: shinylive.qmd
+        text: Shinylive
+      - href: quiz.qmd
+        text: Quiz
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    include-after-body:
+      - text: |
+          <script>
+          const sendHeight = () => {
+            window.parent.postMessage(
+              { type: 'iframeResize', height: document.body.scrollHeight },
+              '*'
+            );
+          };
+          new ResizeObserver(sendHeight).observe(document.body);
+          sendHeight();
+          </script>

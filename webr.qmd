@@ -1,0 +1,28 @@
+---
+title: "WebR Demo"
+engine: knitr
+filters:
+  - webr
+---
+
+## Interactive R in the Browser
+
+Edit and run the code below -- it executes entirely in your browser via [WebR](https://docs.r-wasm.org/webr/latest/).
+
+```{webr-r}
+# Try changing the number of points
+n <- 100
+x <- rnorm(n)
+y <- 2 * x + rnorm(n, sd = 0.5)
+
+plot(x, y, pch = 19, col = "steelblue",
+     main = paste("Scatter plot of", n, "points"),
+     xlab = "x", ylab = "y")
+abline(lm(y ~ x), col = "red", lwd = 2)
+```
+
+```{webr-r}
+# Summary statistics
+fit <- lm(y ~ x)
+summary(fit)
+```
