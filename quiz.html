@@ -71,10 +71,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-96cf71f8a821045f18cdd15ab4f392a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7f6c78d74bb938728e1d5ef88acfd284.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-96cf71f8a821045f18cdd15ab4f392a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2cc47fd1d7d0cac7d51aaf25145a1f35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-2cc47fd1d7d0cac7d51aaf25145a1f35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-2cc47fd1d7d0cac7d51aaf25145a1f35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1657,6 +1661,7 @@ globalThis.qwebrExecuteCode = async function (
 </script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="quarto-light">
@@ -1671,7 +1676,13 @@ globalThis.qwebrExecuteCode = async function (
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link active" data-scroll-target="#knowledge-check">Knowledge Check</a></li>
+  <li><a href="#quiz-demo" id="toc-quiz-demo" class="nav-link active" data-scroll-target="#quiz-demo">Quiz Demo</a></li>
+  <li><a href="#knowledge-check" id="toc-knowledge-check" class="nav-link" data-scroll-target="#knowledge-check">Knowledge Check</a>
+  <ul class="collapse">
+  <li><a href="#sequences" id="toc-sequences" class="nav-link" data-scroll-target="#sequences"><span class="step-number">1</span> Sequences</a></li>
+  <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics"><span class="step-number">2</span> Summary Statistics</a></li>
+  <li><a href="#data-frames" id="toc-data-frames" class="nav-link" data-scroll-target="#data-frames"><span class="step-number">3</span> Data Frames</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1981,34 +1992,44 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
+<section id="quiz-demo" class="level1 lesson-hero">
+<h1>Quiz Demo</h1>
+<div class="lead">
+<p>Test your R knowledge with interactive coding challenges.</p>
+</div>
+<p><span class="badge-feature badge-quiz">Quiz</span> <span class="badge-feature badge-interactive">WebR</span></p>
+</section>
+<section id="learning-objectives" class="level4 learning-objectives">
+<h4 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h4>
+<ul>
+<li>Practice writing R expressions and functions</li>
+<li>Work with vectors, data frames, and basic statistics</li>
+<li>Get immediate feedback by running your code in the browser</li>
+</ul>
+</section>
 <section id="knowledge-check" class="level2">
 <h2 class="anchored" data-anchor-id="knowledge-check">Knowledge Check</h2>
-<p>Test your understanding with the questions below.</p>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Write your answers in the code editors below and click <strong>Run Code</strong> to check your work. Expand the answer accordion if you get stuck.</p>
+<hr class="section-divider">
+<section id="sequences" class="level3">
+<h3 class="anchored"><span class="step-number">1</span> Sequences</h3>
+<div class="card">
+<div class="card-header">
+Question 1
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Question 1
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="card-body">
 <p>What function in R creates a sequence of integers from 1 to 10?</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Show answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<div id="q1Accordion" class="accordion mt-3">
+<div class="accordion-item">
+<h2 class="accordion-header anchored" data-anchor-id="sequences">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1Answer">
+Show Answer
+</button>
+</h2>
+<div id="q1Answer" class="accordion-collapse collapse" data-bs-parent="#q1Accordion">
+<div class="accordion-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># or</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2017,31 +2038,28 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Question 2
+<hr class="section-divider">
+</section>
+<section id="summary-statistics" class="level3">
+<h3 class="anchored"><span class="step-number">2</span> Summary Statistics</h3>
+<div class="card">
+<div class="card-header">
+Question 2
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="card-body">
 <p>Using base R, calculate the mean of the vector <code>c(4, 8, 15, 16, 23, 42)</code>.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Show answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<div id="q2Accordion" class="accordion mt-3">
+<div class="accordion-item">
+<h2 class="accordion-header anchored" data-anchor-id="summary-statistics">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2Answer">
+Show Answer
+</button>
+</h2>
+<div id="q2Answer" class="accordion-collapse collapse" data-bs-parent="#q2Accordion">
+<div class="accordion-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">8</span>, <span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">23</span>, <span class="dv">42</span>))</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Answer: 18</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -2049,31 +2067,28 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Question 3
+<hr class="section-divider">
+</section>
+<section id="data-frames" class="level3">
+<h3 class="anchored"><span class="step-number">3</span> Data Frames</h3>
+<div class="card">
+<div class="card-header">
+Question 3
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="card-body">
 <p>Create a data frame with two columns: <code>name</code> (with values “Alice”, “Bob”, “Carol”) and <code>score</code> (with values 90, 85, 92). Then filter to only rows where score &gt; 88.</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Show answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<div id="q3Accordion" class="accordion mt-3">
+<div class="accordion-item">
+<h2 class="accordion-header anchored" data-anchor-id="data-frames">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3Answer">
+Show Answer
+</button>
+</h2>
+<div id="q3Answer" class="accordion-collapse collapse" data-bs-parent="#q3Accordion">
+<div class="accordion-body">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carol"</span>),</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">85</span>, <span class="dv">92</span>)</span>
@@ -2084,8 +2099,10 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 </div>
 </div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
