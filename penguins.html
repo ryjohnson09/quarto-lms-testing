@@ -104,28 +104,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot">Scatter Plot</a></li>
-  <li><a href="#summary-table" id="toc-summary-table" class="nav-link" data-scroll-target="#summary-table">Summary Table</a></li>
-  <li><a href="#details-by-island" id="toc-details-by-island" class="nav-link" data-scroll-target="#details-by-island">Details by Island</a></li>
-  <li><a href="#about-the-data" id="toc-about-the-data" class="nav-link" data-scroll-target="#about-the-data">About the Data</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -179,7 +168,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>The <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a> dataset contains measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.</p>
 </section>
-<section id="scatter-plot" class="level2">
+<section id="meet-the-species" class="level2 gated">
+<h2 class="anchored" data-anchor-id="meet-the-species">Meet the Species</h2>
+<p>Click a card to learn more about each species.</p>
+<div class="grid">
+<div class="g-col-12 g-col-md-4">
+<div class="flip-card flip-card-adelie" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="anchored">
+Adelie
+</h3>
+<p>
+Click to flip
+</p>
+</div>
+<div class="flip-card-back">
+<p>
+<strong>Islands:</strong> All three
+</p>
+<p>
+<strong>Avg mass:</strong> 3,701 g
+</p>
+<p>
+<strong>Avg flipper:</strong> 190 mm
+</p>
+<p>
+<strong>Diet:</strong> Krill
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-4">
+<div class="flip-card flip-card-chinstrap" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="anchored">
+Chinstrap
+</h3>
+<p>
+Click to flip
+</p>
+</div>
+<div class="flip-card-back">
+<p>
+<strong>Island:</strong> Dream
+</p>
+<p>
+<strong>Avg mass:</strong> 3,733 g
+</p>
+<p>
+<strong>Avg flipper:</strong> 196 mm
+</p>
+<p>
+<strong>Diet:</strong> Krill
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-4">
+<div class="flip-card flip-card-gentoo" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="anchored">
+Gentoo
+</h3>
+<p>
+Click to flip
+</p>
+</div>
+<div class="flip-card-back">
+<p>
+<strong>Island:</strong> Biscoe
+</p>
+<p>
+<strong>Avg mass:</strong> 5,076 g
+</p>
+<p>
+<strong>Avg flipper:</strong> 217 mm
+</p>
+<p>
+<strong>Diet:</strong> Fish &amp; krill
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="scatter-plot" class="level2 gated">
 <h2 class="anchored" data-anchor-id="scatter-plot">Scatter Plot</h2>
 <div class="cell">
 <details class="code-fold">
@@ -209,7 +288,7 @@ Figure&nbsp;1: Flipper length vs.&nbsp;body mass by species
 </div>
 </div>
 </section>
-<section id="summary-table" class="level2">
+<section id="summary-table" class="level2 gated">
 <h2 class="anchored" data-anchor-id="summary-table">Summary Table</h2>
 <div class="cell">
 <details class="code-fold">
@@ -239,23 +318,23 @@ Table&nbsp;1
 </figcaption>
 <div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="xygqbebcij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xygqbebcij table {
+<div id="qsewmxixsz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qsewmxixsz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xygqbebcij thead, #xygqbebcij tbody, #xygqbebcij tfoot, #xygqbebcij tr, #xygqbebcij td, #xygqbebcij th {
+#qsewmxixsz thead, #qsewmxixsz tbody, #qsewmxixsz tfoot, #qsewmxixsz tr, #qsewmxixsz td, #qsewmxixsz th {
   border-style: none;
 }
 
-#xygqbebcij p {
+#qsewmxixsz p {
   margin: 0;
   padding: 0;
 }
 
-#xygqbebcij .gt_table {
+#qsewmxixsz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -281,12 +360,12 @@ Table&nbsp;1
   border-left-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_caption {
+#qsewmxixsz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xygqbebcij .gt_title {
+#qsewmxixsz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -298,7 +377,7 @@ Table&nbsp;1
   border-bottom-width: 0;
 }
 
-#xygqbebcij .gt_subtitle {
+#qsewmxixsz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -310,7 +389,7 @@ Table&nbsp;1
   border-top-width: 0;
 }
 
-#xygqbebcij .gt_heading {
+#qsewmxixsz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -322,13 +401,13 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_bottom_border {
+#qsewmxixsz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_col_headings {
+#qsewmxixsz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -343,7 +422,7 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_col_heading {
+#qsewmxixsz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -363,7 +442,7 @@ Table&nbsp;1
   overflow-x: hidden;
 }
 
-#xygqbebcij .gt_column_spanner_outer {
+#qsewmxixsz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -375,15 +454,15 @@ Table&nbsp;1
   padding-right: 4px;
 }
 
-#xygqbebcij .gt_column_spanner_outer:first-child {
+#qsewmxixsz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xygqbebcij .gt_column_spanner_outer:last-child {
+#qsewmxixsz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xygqbebcij .gt_column_spanner {
+#qsewmxixsz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -395,11 +474,11 @@ Table&nbsp;1
   width: 100%;
 }
 
-#xygqbebcij .gt_spanner_row {
+#qsewmxixsz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xygqbebcij .gt_group_heading {
+#qsewmxixsz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -425,7 +504,7 @@ Table&nbsp;1
   text-align: left;
 }
 
-#xygqbebcij .gt_empty_group_heading {
+#qsewmxixsz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -440,15 +519,15 @@ Table&nbsp;1
   vertical-align: middle;
 }
 
-#xygqbebcij .gt_from_md > :first-child {
+#qsewmxixsz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xygqbebcij .gt_from_md > :last-child {
+#qsewmxixsz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xygqbebcij .gt_row {
+#qsewmxixsz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -467,7 +546,7 @@ Table&nbsp;1
   overflow-x: hidden;
 }
 
-#xygqbebcij .gt_stub {
+#qsewmxixsz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -480,7 +559,7 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#xygqbebcij .gt_stub_row_group {
+#qsewmxixsz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -494,15 +573,15 @@ Table&nbsp;1
   vertical-align: top;
 }
 
-#xygqbebcij .gt_row_group_first td {
+#qsewmxixsz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xygqbebcij .gt_row_group_first th {
+#qsewmxixsz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xygqbebcij .gt_summary_row {
+#qsewmxixsz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -512,16 +591,16 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#xygqbebcij .gt_first_summary_row {
+#qsewmxixsz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_first_summary_row.thick {
+#qsewmxixsz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xygqbebcij .gt_last_summary_row {
+#qsewmxixsz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -531,7 +610,7 @@ Table&nbsp;1
   border-bottom-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_grand_summary_row {
+#qsewmxixsz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -541,7 +620,7 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#xygqbebcij .gt_first_grand_summary_row {
+#qsewmxixsz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -551,7 +630,7 @@ Table&nbsp;1
   border-top-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_last_grand_summary_row_top {
+#qsewmxixsz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -561,11 +640,11 @@ Table&nbsp;1
   border-bottom-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_striped {
+#qsewmxixsz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xygqbebcij .gt_table_body {
+#qsewmxixsz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -574,7 +653,7 @@ Table&nbsp;1
   border-bottom-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_footnotes {
+#qsewmxixsz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -588,7 +667,7 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_footnote {
+#qsewmxixsz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -597,7 +676,7 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#xygqbebcij .gt_sourcenotes {
+#qsewmxixsz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -611,7 +690,7 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#xygqbebcij .gt_sourcenote {
+#qsewmxixsz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -619,72 +698,72 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#xygqbebcij .gt_left {
+#qsewmxixsz .gt_left {
   text-align: left;
 }
 
-#xygqbebcij .gt_center {
+#qsewmxixsz .gt_center {
   text-align: center;
 }
 
-#xygqbebcij .gt_right {
+#qsewmxixsz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xygqbebcij .gt_font_normal {
+#qsewmxixsz .gt_font_normal {
   font-weight: normal;
 }
 
-#xygqbebcij .gt_font_bold {
+#qsewmxixsz .gt_font_bold {
   font-weight: bold;
 }
 
-#xygqbebcij .gt_font_italic {
+#qsewmxixsz .gt_font_italic {
   font-style: italic;
 }
 
-#xygqbebcij .gt_super {
+#qsewmxixsz .gt_super {
   font-size: 65%;
 }
 
-#xygqbebcij .gt_footnote_marks {
+#qsewmxixsz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xygqbebcij .gt_asterisk {
+#qsewmxixsz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xygqbebcij .gt_indent_1 {
+#qsewmxixsz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xygqbebcij .gt_indent_2 {
+#qsewmxixsz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xygqbebcij .gt_indent_3 {
+#qsewmxixsz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xygqbebcij .gt_indent_4 {
+#qsewmxixsz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xygqbebcij .gt_indent_5 {
+#qsewmxixsz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xygqbebcij .katex-display {
+#qsewmxixsz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xygqbebcij div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qsewmxixsz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -746,7 +825,69 @@ Table&nbsp;1
 </div>
 </div>
 </section>
-<section id="details-by-island" class="level2">
+<section id="did-you-know" class="level2 gated">
+<h2 class="anchored" data-anchor-id="did-you-know">Did You Know?</h2>
+<p>Swipe or use the arrows to browse penguin fun facts.</p>
+<div class="slider-wrapper">
+<button class="slider-btn slider-btn-prev" onclick="this.parentElement.querySelector('.slider-track').scrollBy({left: -296, behavior: 'smooth'})">
+‹
+</button>
+<div class="slider-track">
+<div class="slider-card">
+<h4 class="anchored">
+Deepest Divers
+</h4>
+<p>
+Gentoo penguins can dive to depths of over 200 meters and hold their breath for up to 7 minutes while hunting fish.
+</p>
+</div>
+<div class="slider-card">
+<h4 class="anchored">
+Speed Swimmers
+</h4>
+<p>
+Gentoos are the fastest underwater-swimming penguins, reaching speeds of up to 36 km/h (22 mph).
+</p>
+</div>
+<div class="slider-card">
+<h4 class="anchored">
+Pebble Proposals
+</h4>
+<p>
+Adelie penguins propose to their mates by offering a carefully chosen pebble. Fights can break out over the best stones.
+</p>
+</div>
+<div class="slider-card">
+<h4 class="anchored">
+Named for a Stripe
+</h4>
+<p>
+Chinstrap penguins get their name from the narrow black band running under their chin, like a helmet strap.
+</p>
+</div>
+<div class="slider-card">
+<h4 class="anchored">
+Extreme Commuters
+</h4>
+<p>
+Adelie penguins migrate up to 17,600 km (10,900 mi) each year, following the sun between breeding and feeding grounds.
+</p>
+</div>
+<div class="slider-card">
+<h4 class="anchored">
+Largest of the Three
+</h4>
+<p>
+Gentoo penguins are the largest species in this dataset, averaging over 5 kg — about 37% heavier than Adelie or Chinstrap.
+</p>
+</div>
+</div>
+<button class="slider-btn slider-btn-next" onclick="this.parentElement.querySelector('.slider-track').scrollBy({left: 296, behavior: 'smooth'})">
+›
+</button>
+</div>
+</section>
+<section id="details-by-island" class="level2 gated">
 <h2 class="anchored" data-anchor-id="details-by-island">Details by Island</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Biscoe</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Dream</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Torgersen</a></li></ul>
@@ -817,7 +958,7 @@ Table&nbsp;1
 </div>
 </div>
 </section>
-<section id="about-the-data" class="level2">
+<section id="about-the-data" class="level2 gated">
 <h2 class="anchored" data-anchor-id="about-the-data">About the Data</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -867,23 +1008,23 @@ Table&nbsp;1
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">"Missing Values per Column"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="gdazqskxyc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gdazqskxyc table {
+<div id="ejghizysan" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ejghizysan table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gdazqskxyc thead, #gdazqskxyc tbody, #gdazqskxyc tfoot, #gdazqskxyc tr, #gdazqskxyc td, #gdazqskxyc th {
+#ejghizysan thead, #ejghizysan tbody, #ejghizysan tfoot, #ejghizysan tr, #ejghizysan td, #ejghizysan th {
   border-style: none;
 }
 
-#gdazqskxyc p {
+#ejghizysan p {
   margin: 0;
   padding: 0;
 }
 
-#gdazqskxyc .gt_table {
+#ejghizysan .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -909,12 +1050,12 @@ Table&nbsp;1
   border-left-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_caption {
+#ejghizysan .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gdazqskxyc .gt_title {
+#ejghizysan .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -926,7 +1067,7 @@ Table&nbsp;1
   border-bottom-width: 0;
 }
 
-#gdazqskxyc .gt_subtitle {
+#ejghizysan .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -938,7 +1079,7 @@ Table&nbsp;1
   border-top-width: 0;
 }
 
-#gdazqskxyc .gt_heading {
+#ejghizysan .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -950,13 +1091,13 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_bottom_border {
+#ejghizysan .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_col_headings {
+#ejghizysan .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -971,7 +1112,7 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_col_heading {
+#ejghizysan .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -991,7 +1132,7 @@ Table&nbsp;1
   overflow-x: hidden;
 }
 
-#gdazqskxyc .gt_column_spanner_outer {
+#ejghizysan .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1003,15 +1144,15 @@ Table&nbsp;1
   padding-right: 4px;
 }
 
-#gdazqskxyc .gt_column_spanner_outer:first-child {
+#ejghizysan .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gdazqskxyc .gt_column_spanner_outer:last-child {
+#ejghizysan .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gdazqskxyc .gt_column_spanner {
+#ejghizysan .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1023,11 +1164,11 @@ Table&nbsp;1
   width: 100%;
 }
 
-#gdazqskxyc .gt_spanner_row {
+#ejghizysan .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gdazqskxyc .gt_group_heading {
+#ejghizysan .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1053,7 +1194,7 @@ Table&nbsp;1
   text-align: left;
 }
 
-#gdazqskxyc .gt_empty_group_heading {
+#ejghizysan .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1068,15 +1209,15 @@ Table&nbsp;1
   vertical-align: middle;
 }
 
-#gdazqskxyc .gt_from_md > :first-child {
+#ejghizysan .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gdazqskxyc .gt_from_md > :last-child {
+#ejghizysan .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gdazqskxyc .gt_row {
+#ejghizysan .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1095,7 +1236,7 @@ Table&nbsp;1
   overflow-x: hidden;
 }
 
-#gdazqskxyc .gt_stub {
+#ejghizysan .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1108,7 +1249,7 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#gdazqskxyc .gt_stub_row_group {
+#ejghizysan .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1122,15 +1263,15 @@ Table&nbsp;1
   vertical-align: top;
 }
 
-#gdazqskxyc .gt_row_group_first td {
+#ejghizysan .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gdazqskxyc .gt_row_group_first th {
+#ejghizysan .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gdazqskxyc .gt_summary_row {
+#ejghizysan .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1140,16 +1281,16 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#gdazqskxyc .gt_first_summary_row {
+#ejghizysan .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_first_summary_row.thick {
+#ejghizysan .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gdazqskxyc .gt_last_summary_row {
+#ejghizysan .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1159,7 +1300,7 @@ Table&nbsp;1
   border-bottom-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_grand_summary_row {
+#ejghizysan .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1169,7 +1310,7 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#gdazqskxyc .gt_first_grand_summary_row {
+#ejghizysan .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1179,7 +1320,7 @@ Table&nbsp;1
   border-top-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_last_grand_summary_row_top {
+#ejghizysan .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1189,11 +1330,11 @@ Table&nbsp;1
   border-bottom-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_striped {
+#ejghizysan .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gdazqskxyc .gt_table_body {
+#ejghizysan .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1202,7 +1343,7 @@ Table&nbsp;1
   border-bottom-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_footnotes {
+#ejghizysan .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1216,7 +1357,7 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_footnote {
+#ejghizysan .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1225,7 +1366,7 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#gdazqskxyc .gt_sourcenotes {
+#ejghizysan .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1239,7 +1380,7 @@ Table&nbsp;1
   border-right-color: #D3D3D3;
 }
 
-#gdazqskxyc .gt_sourcenote {
+#ejghizysan .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1247,72 +1388,72 @@ Table&nbsp;1
   padding-right: 5px;
 }
 
-#gdazqskxyc .gt_left {
+#ejghizysan .gt_left {
   text-align: left;
 }
 
-#gdazqskxyc .gt_center {
+#ejghizysan .gt_center {
   text-align: center;
 }
 
-#gdazqskxyc .gt_right {
+#ejghizysan .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gdazqskxyc .gt_font_normal {
+#ejghizysan .gt_font_normal {
   font-weight: normal;
 }
 
-#gdazqskxyc .gt_font_bold {
+#ejghizysan .gt_font_bold {
   font-weight: bold;
 }
 
-#gdazqskxyc .gt_font_italic {
+#ejghizysan .gt_font_italic {
   font-style: italic;
 }
 
-#gdazqskxyc .gt_super {
+#ejghizysan .gt_super {
   font-size: 65%;
 }
 
-#gdazqskxyc .gt_footnote_marks {
+#ejghizysan .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gdazqskxyc .gt_asterisk {
+#ejghizysan .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gdazqskxyc .gt_indent_1 {
+#ejghizysan .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gdazqskxyc .gt_indent_2 {
+#ejghizysan .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gdazqskxyc .gt_indent_3 {
+#ejghizysan .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gdazqskxyc .gt_indent_4 {
+#ejghizysan .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gdazqskxyc .gt_indent_5 {
+#ejghizysan .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gdazqskxyc .katex-display {
+#ejghizysan .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gdazqskxyc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ejghizysan div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1353,9 +1494,9 @@ Table&nbsp;1
 </div>
 </div>
 </div>
-
-
 </section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1768,6 +1909,29 @@ const sendHeight = () => {
 };
 new ResizeObserver(sendHeight).observe(document.body);
 sendHeight();
+</script>
+<script>
+{
+  const gated = document.querySelectorAll('.gated');
+  if (gated.length > 0) {
+    function createBtn(nextSection) {
+      const btn = document.createElement('button');
+      btn.className = 'continue-btn';
+      btn.textContent = 'Continue';
+      btn.addEventListener('click', () => {
+        nextSection.classList.add('unlocked');
+        btn.remove();
+        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sendHeight();
+      });
+      return btn;
+    }
+    gated[0].parentNode.insertBefore(createBtn(gated[0]), gated[0]);
+    for (let i = 0; i < gated.length - 1; i++) {
+      gated[i].appendChild(createBtn(gated[i + 1]));
+    }
+  }
+}
 </script>
 
 

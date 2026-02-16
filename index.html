@@ -69,6 +69,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="fullcontent quarto-light">
@@ -526,6 +527,29 @@ const sendHeight = () => {
 };
 new ResizeObserver(sendHeight).observe(document.body);
 sendHeight();
+</script>
+<script>
+{
+  const gated = document.querySelectorAll('.gated');
+  if (gated.length > 0) {
+    function createBtn(nextSection) {
+      const btn = document.createElement('button');
+      btn.className = 'continue-btn';
+      btn.textContent = 'Continue';
+      btn.addEventListener('click', () => {
+        nextSection.classList.add('unlocked');
+        btn.remove();
+        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sendHeight();
+      });
+      return btn;
+    }
+    gated[0].parentNode.insertBefore(createBtn(gated[0]), gated[0]);
+    for (let i = 0; i < gated.length - 1; i++) {
+      gated[i].appendChild(createBtn(gated[i + 1]));
+    }
+  }
+}
 </script>
 
 

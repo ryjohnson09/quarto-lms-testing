@@ -69,24 +69,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#video-walkthrough" id="toc-video-walkthrough" class="nav-link active" data-scroll-target="#video-walkthrough">Video Walkthrough</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -546,6 +539,29 @@ const sendHeight = () => {
 };
 new ResizeObserver(sendHeight).observe(document.body);
 sendHeight();
+</script>
+<script>
+{
+  const gated = document.querySelectorAll('.gated');
+  if (gated.length > 0) {
+    function createBtn(nextSection) {
+      const btn = document.createElement('button');
+      btn.className = 'continue-btn';
+      btn.textContent = 'Continue';
+      btn.addEventListener('click', () => {
+        nextSection.classList.add('unlocked');
+        btn.remove();
+        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sendHeight();
+      });
+      return btn;
+    }
+    gated[0].parentNode.insertBefore(createBtn(gated[0]), gated[0]);
+    for (let i = 0; i < gated.length - 1; i++) {
+      gated[i].appendChild(createBtn(gated[i + 1]));
+    }
+  }
+}
 </script>
 
 

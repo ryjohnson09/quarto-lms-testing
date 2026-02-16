@@ -84,6 +84,13 @@
     "text": "Overview\nThe Palmer Penguins dataset contains measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica."
   },
   {
+    "objectID": "penguins.html#meet-the-species",
+    "href": "penguins.html#meet-the-species",
+    "title": "Palmer Penguins Explorer",
+    "section": "Meet the Species",
+    "text": "Meet the Species\nClick a card to learn more about each species.\n\n\n\n\n\n\nAdelie\n\n\nClick to flip\n\n\n\n\nIslands: All three\n\n\nAvg mass: 3,701 g\n\n\nAvg flipper: 190 mm\n\n\nDiet: Krill\n\n\n\n\n\n\n\n\n\n\nChinstrap\n\n\nClick to flip\n\n\n\n\nIsland: Dream\n\n\nAvg mass: 3,733 g\n\n\nAvg flipper: 196 mm\n\n\nDiet: Krill\n\n\n\n\n\n\n\n\n\n\nGentoo\n\n\nClick to flip\n\n\n\n\nIsland: Biscoe\n\n\nAvg mass: 5,076 g\n\n\nAvg flipper: 217 mm\n\n\nDiet: Fish & krill"
+  },
+  {
     "objectID": "penguins.html#scatter-plot",
     "href": "penguins.html#scatter-plot",
     "title": "Palmer Penguins Explorer",
@@ -96,6 +103,13 @@
     "title": "Palmer Penguins Explorer",
     "section": "Summary Table",
     "text": "Summary Table\n\n\nCode\npenguins |&gt;\n  filter(!is.na(body_mass_g)) |&gt;\n  group_by(species) |&gt;\n  summarise(\n    Count = n(),\n    `Mean Body Mass (g)` = round(mean(body_mass_g), 0),\n    `Mean Flipper Length (mm)` = round(mean(flipper_length_mm, na.rm = TRUE), 1),\n    `Mean Bill Length (mm)` = round(mean(bill_length_mm, na.rm = TRUE), 1),\n    `Mean Bill Depth (mm)` = round(mean(bill_depth_mm, na.rm = TRUE), 1)\n  ) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = \"Penguin Species Summary\",\n    subtitle = \"Averages across all islands\"\n  ) |&gt;\n  cols_label(species = \"Species\") |&gt;\n  tab_source_note(\"Source: palmerpenguins R package\")\n\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\nPenguin Species Summary\n\n\nAverages across all islands\n\n\nSpecies\nCount\nMean Body Mass (g)\nMean Flipper Length (mm)\nMean Bill Length (mm)\nMean Bill Depth (mm)\n\n\n\n\nAdelie\n151\n3701\n190.0\n38.8\n18.3\n\n\nChinstrap\n68\n3733\n195.8\n48.8\n18.4\n\n\nGentoo\n123\n5076\n217.2\n47.5\n15.0\n\n\n\nSource: palmerpenguins R package"
+  },
+  {
+    "objectID": "penguins.html#did-you-know",
+    "href": "penguins.html#did-you-know",
+    "title": "Palmer Penguins Explorer",
+    "section": "Did You Know?",
+    "text": "Did You Know?\nSwipe or use the arrows to browse penguin fun facts.\n\n\n‹\n\n\n\n\nDeepest Divers\n\n\nGentoo penguins can dive to depths of over 200 meters and hold their breath for up to 7 minutes while hunting fish.\n\n\n\n\nSpeed Swimmers\n\n\nGentoos are the fastest underwater-swimming penguins, reaching speeds of up to 36 km/h (22 mph).\n\n\n\n\nPebble Proposals\n\n\nAdelie penguins propose to their mates by offering a carefully chosen pebble. Fights can break out over the best stones.\n\n\n\n\nNamed for a Stripe\n\n\nChinstrap penguins get their name from the narrow black band running under their chin, like a helmet strap.\n\n\n\n\nExtreme Commuters\n\n\nAdelie penguins migrate up to 17,600 km (10,900 mi) each year, following the sun between breeding and feeding grounds.\n\n\n\n\nLargest of the Three\n\n\nGentoo penguins are the largest species in this dataset, averaging over 5 kg — about 37% heavier than Adelie or Chinstrap.\n\n\n\n\n›"
   },
   {
     "objectID": "penguins.html#details-by-island",
