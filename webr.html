@@ -2392,6 +2392,11 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
   </script>
 </div> <!-- /content -->
 <script>
+if (window.top === window.self) {
+  document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:system-ui;color:#555;"><p>This content is available in the course portal.</p></div>';
+}
+</script>
+<script>
 const sendHeight = () => {
   window.parent.postMessage(
     { type: 'iframeResize', height: document.body.scrollHeight },
