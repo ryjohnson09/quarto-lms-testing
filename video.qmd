@@ -1,0 +1,16 @@
+---
+title: "Running Code in Posit Workbench"
+subtitle: "Learn how to run R and Python code and manage long-running jobs in Posit Workbench."
+---
+
+::: {.callout-note}
+## Learning Objectives
+- Run R and Python code interactively in Posit Workbench
+- Use the Posit Workbench Jobs feature to manage long-running processes
+:::
+
+## Video Walkthrough
+
+Watch the video below for a guided tour of running code in Posit Workbench.
+
+<iframe src="https://fast.wistia.net/embed/iframe/k3om731cql" allowfullscreen style="width:100%;aspect-ratio:16/9;border:none;"></iframe>

@@ -1,20 +1,12 @@
 ---
 title: "Quiz Demo"
+subtitle: "Test your R knowledge with interactive coding challenges."
 filters:
   - webr
 ---
 
-::: {.lesson-hero}
-# Quiz Demo
-::: {.lead}
-Test your R knowledge with interactive coding challenges.
-:::
-<span class="badge-feature badge-quiz">Quiz</span>
-<span class="badge-feature badge-interactive">WebR</span>
-:::
-
-::: {.learning-objectives}
-#### Learning Objectives
+::: {.callout-note}
+## Learning Objectives
 - Practice writing R expressions and functions
 - Work with vectors, data frames, and basic statistics
 - Get immediate feedback by running your code in the browser
@@ -22,15 +14,11 @@ Test your R knowledge with interactive coding challenges.
 
 ## Knowledge Check
 
-Write your answers in the code editors below and click **Run Code** to check your work. Expand the answer accordion if you get stuck.
+Write your answers in the code editors below and click **Run Code** to check your work. Expand the answer sections if you get stuck.
 
-<hr class="section-divider">
+---
 
-### <span class="step-number">1</span> Sequences
-
-<div class="card">
-<div class="card-header">Question 1</div>
-<div class="card-body">
+### Question 1: Sequences
 
 What function in R creates a sequence of integers from 1 to 10?
 
@@ -40,37 +28,19 @@ What function in R creates a sequence of integers from 1 to 10?
 
 ```
 
-<div class="accordion mt-3" id="q1Accordion">
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1Answer">
-Show Answer
-</button>
-</h2>
-<div id="q1Answer" class="accordion-collapse collapse" data-bs-parent="#q1Accordion">
-<div class="accordion-body">
+::: {.callout-tip collapse="true"}
+## Show Answer
 
 ```r
 1:10
 # or
 seq(1, 10)
 ```
+:::
 
-</div>
-</div>
-</div>
-</div>
+---
 
-</div>
-</div>
-
-<hr class="section-divider">
-
-### <span class="step-number">2</span> Summary Statistics
-
-<div class="card">
-<div class="card-header">Question 2</div>
-<div class="card-body">
+### Question 2: Summary Statistics
 
 Using base R, calculate the mean of the vector `c(4, 8, 15, 16, 23, 42)`.
 
@@ -80,36 +50,18 @@ Using base R, calculate the mean of the vector `c(4, 8, 15, 16, 23, 42)`.
 
 ```
 
-<div class="accordion mt-3" id="q2Accordion">
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2Answer">
-Show Answer
-</button>
-</h2>
-<div id="q2Answer" class="accordion-collapse collapse" data-bs-parent="#q2Accordion">
-<div class="accordion-body">
+::: {.callout-tip collapse="true"}
+## Show Answer
 
 ```r
 mean(c(4, 8, 15, 16, 23, 42))
 # Answer: 18
 ```
+:::
 
-</div>
-</div>
-</div>
-</div>
+---
 
-</div>
-</div>
-
-<hr class="section-divider">
-
-### <span class="step-number">3</span> Data Frames
-
-<div class="card">
-<div class="card-header">Question 3</div>
-<div class="card-body">
+### Question 3: Data Frames
 
 Create a data frame with two columns: `name` (with values "Alice", "Bob", "Carol") and `score` (with values 90, 85, 92). Then filter to only rows where score > 88.
 
@@ -119,15 +71,8 @@ Create a data frame with two columns: `name` (with values "Alice", "Bob", "Carol
 
 ```
 
-<div class="accordion mt-3" id="q3Accordion">
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3Answer">
-Show Answer
-</button>
-</h2>
-<div id="q3Answer" class="accordion-collapse collapse" data-bs-parent="#q3Accordion">
-<div class="accordion-body">
+::: {.callout-tip collapse="true"}
+## Show Answer
 
 ```r
 df <- data.frame(
@@ -136,11 +81,4 @@ df <- data.frame(
 )
 df[df$score > 88, ]
 ```
-
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
+:::

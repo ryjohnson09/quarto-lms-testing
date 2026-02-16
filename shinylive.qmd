@@ -1,20 +1,12 @@
 ---
 title: "Shinylive Demo"
+subtitle: "A fully interactive Shiny app running entirely in your browser."
 filters:
   - shinylive
 ---
 
-::: {.lesson-hero}
-# Shinylive Demo
-::: {.lead}
-A fully interactive Shiny app running entirely in your browser.
-:::
-<span class="badge-feature badge-shiny">Shiny</span>
-<span class="badge-feature badge-shiny">Client-side</span>
-:::
-
-::: {.learning-objectives}
-#### Learning Objectives
+::: {.callout-note}
+## Learning Objectives
 - See how Shiny apps can run without a server using Shinylive
 - Explore how reactive inputs (sliders) update outputs (plots) in real time
 - Observe the effect of sample size, mean, and standard deviation on a distribution
@@ -24,11 +16,7 @@ A fully interactive Shiny app running entirely in your browser.
 
 This Shiny app runs entirely in the browser via [Shinylive](https://shinylive.io/) -- no server required. Use the sliders to explore how parameters affect the normal distribution.
 
-<hr class="section-divider">
-
-<div class="card">
-<div class="card-header">Normal Distribution Explorer</div>
-<div class="card-body">
+---
 
 ```{shinylive-r}
 #| standalone: true
@@ -62,11 +50,8 @@ server <- function(input, output) {
 shinyApp(ui, server)
 ```
 
-</div>
-</div>
-
-::: {.try-it}
-#### Try It Yourself
+::: {.callout-tip}
+## Try It Yourself
 - Set the standard deviation to `0.5` and the number of observations to `1000`. How does the histogram shape compare to sd = `5`?
 - Move the mean slider and watch how the entire distribution shifts along the x-axis.
 :::
