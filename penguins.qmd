@@ -25,6 +25,68 @@ library(gt)
 
 The [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/) dataset contains measurements for `r nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
 
+::: {.gated}
+## Meet the Species
+
+Click a card to learn more about each species.
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+<div class="flip-card flip-card-adelie" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3>Adelie</h3>
+<p>Click to flip</p>
+</div>
+<div class="flip-card-back">
+<p><strong>Islands:</strong> All three</p>
+<p><strong>Avg mass:</strong> 3,701 g</p>
+<p><strong>Avg flipper:</strong> 190 mm</p>
+<p><strong>Diet:</strong> Krill</p>
+</div>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="flip-card flip-card-chinstrap" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3>Chinstrap</h3>
+<p>Click to flip</p>
+</div>
+<div class="flip-card-back">
+<p><strong>Island:</strong> Dream</p>
+<p><strong>Avg mass:</strong> 3,733 g</p>
+<p><strong>Avg flipper:</strong> 196 mm</p>
+<p><strong>Diet:</strong> Krill</p>
+</div>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="flip-card flip-card-gentoo" onclick="this.classList.toggle('flipped')">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3>Gentoo</h3>
+<p>Click to flip</p>
+</div>
+<div class="flip-card-back">
+<p><strong>Island:</strong> Biscoe</p>
+<p><strong>Avg mass:</strong> 5,076 g</p>
+<p><strong>Avg flipper:</strong> 217 mm</p>
+<p><strong>Diet:</strong> Fish & krill</p>
+</div>
+</div>
+</div>
+:::
+
+:::
+:::
+
+::: {.gated}
 ## Scatter Plot
 
 ```{r}
@@ -43,7 +105,9 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, sh
   ) +
   theme_minimal()
 ```
+:::
 
+::: {.gated}
 ## Summary Table
 
 ```{r}
@@ -67,7 +131,53 @@ penguins |>
   cols_label(species = "Species") |>
   tab_source_note("Source: palmerpenguins R package")
 ```
+:::
 
+::: {.gated}
+## Did You Know?
+
+Swipe or use the arrows to browse penguin fun facts.
+
+<div class="slider-wrapper">
+<button class="slider-btn slider-btn-prev" onclick="this.parentElement.querySelector('.slider-track').scrollBy({left: -296, behavior: 'smooth'})">&#8249;</button>
+<div class="slider-track">
+
+<div class="slider-card">
+<h4>Deepest Divers</h4>
+<p>Gentoo penguins can dive to depths of over 200 meters and hold their breath for up to 7 minutes while hunting fish.</p>
+</div>
+
+<div class="slider-card">
+<h4>Speed Swimmers</h4>
+<p>Gentoos are the fastest underwater-swimming penguins, reaching speeds of up to 36 km/h (22 mph).</p>
+</div>
+
+<div class="slider-card">
+<h4>Pebble Proposals</h4>
+<p>Adelie penguins propose to their mates by offering a carefully chosen pebble. Fights can break out over the best stones.</p>
+</div>
+
+<div class="slider-card">
+<h4>Named for a Stripe</h4>
+<p>Chinstrap penguins get their name from the narrow black band running under their chin, like a helmet strap.</p>
+</div>
+
+<div class="slider-card">
+<h4>Extreme Commuters</h4>
+<p>Adelie penguins migrate up to 17,600 km (10,900 mi) each year, following the sun between breeding and feeding grounds.</p>
+</div>
+
+<div class="slider-card">
+<h4>Largest of the Three</h4>
+<p>Gentoo penguins are the largest species in this dataset, averaging over 5 kg — about 37% heavier than Adelie or Chinstrap.</p>
+</div>
+
+</div>
+<button class="slider-btn slider-btn-next" onclick="this.parentElement.querySelector('.slider-track').scrollBy({left: 296, behavior: 'smooth'})">&#8250;</button>
+</div>
+:::
+
+::: {.gated}
 ## Details by Island
 
 ::: {.panel-tabset}
@@ -112,7 +222,9 @@ penguins |>
 ```
 
 :::
+:::
 
+::: {.gated}
 ## About the Data
 
 ::: {.callout-tip collapse="true"}
@@ -141,4 +253,5 @@ penguins |>
   gt() |>
   tab_header(title = "Missing Values per Column")
 ```
+:::
 :::

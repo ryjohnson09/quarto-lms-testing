@@ -1,1 +1,176 @@
-/* intentionally empty – using default Quarto theme */
+/* ── Flip cards ──────────────────────────────────────────────── */
+.flip-card {
+  perspective: 1000px;
+  height: 220px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flip-card-front {
+  color: #fff;
+  font-weight: 600;
+}
+
+.flip-card-front p {
+  font-weight: 400;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 0;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.flip-card-back p {
+  margin-bottom: 0.3rem;
+}
+
+.flip-card-adelie .flip-card-front,
+.flip-card-adelie .flip-card-back {
+  background: darkorange;
+}
+
+.flip-card-chinstrap .flip-card-front,
+.flip-card-chinstrap .flip-card-back {
+  background: #7b2d8e;
+}
+
+.flip-card-gentoo .flip-card-front,
+.flip-card-gentoo .flip-card-back {
+  background: #2a7b7f;
+}
+
+/* ── Card slider ─────────────────────────────────────────────── */
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.5rem 0 1rem;
+}
+
+/* hide scrollbar across browsers */
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+.slider-track {
+  scrollbar-width: none;
+}
+
+.slider-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  background: #f8f9fa;
+}
+
+.slider-card h4 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #213D4F;
+}
+
+.slider-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #dee2e6;
+  background: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.slider-btn:hover {
+  background: #f0f0f0;
+}
+
+.slider-btn-prev {
+  left: -18px;
+}
+
+.slider-btn-next {
+  right: -18px;
+}
+
+/* ── Progressive reveal (Continue buttons) ─────────────────── */
+.gated {
+  display: none;
+}
+
+.gated.unlocked {
+  display: block;
+  animation: gatedReveal 0.6s ease;
+}
+
+@keyframes gatedReveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.continue-btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #213D4F;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.continue-btn:hover {
+  background: #2d5468;
+}
