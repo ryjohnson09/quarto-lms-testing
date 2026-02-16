@@ -1,59 +1,45 @@
 [
   {
-    "objectID": "penguins.html",
-    "href": "penguins.html",
-    "title": "Palmer Penguins Explorer",
+    "objectID": "video.html",
+    "href": "video.html",
+    "title": "Running Code in Posit Workbench",
     "section": "",
-    "text": "Exploring penguin measurements across species and islands in Antarctica.\n\nggplot2 gt tables Tabsets\nCode\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(gt)"
+    "text": "NoteLearning Objectives\n\n\n\n\nRun R and Python code interactively in Posit Workbench\nUse the Posit Workbench Jobs feature to manage long-running processes"
   },
   {
-    "objectID": "penguins.html#overview",
-    "href": "penguins.html#overview",
-    "title": "Palmer Penguins Explorer",
-    "section": "Overview",
-    "text": "Overview\nThe Palmer Penguins dataset contains measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica."
+    "objectID": "video.html#video-walkthrough",
+    "href": "video.html#video-walkthrough",
+    "title": "Running Code in Posit Workbench",
+    "section": "Video Walkthrough",
+    "text": "Video Walkthrough\nWatch the video below for a guided tour of running code in Posit Workbench."
   },
   {
-    "objectID": "penguins.html#scatter-plot",
-    "href": "penguins.html#scatter-plot",
-    "title": "Palmer Penguins Explorer",
-    "section": "Scatter Plot",
-    "text": "Scatter Plot\n\n\nFlipper Length vs. Body Mass\n\n\n\n\nCode\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, shape = species)) +\n  geom_point(size = 2.5, alpha = 0.7) +\n  scale_color_manual(values = c(\"darkorange\", \"purple\", \"cyan4\")) +\n  labs(\n    x = \"Flipper Length (mm)\",\n    y = \"Body Mass (g)\",\n    color = \"Species\",\n    shape = \"Species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\nFigure 1: Flipper length vs. body mass by species"
-  },
-  {
-    "objectID": "penguins.html#summary-table",
-    "href": "penguins.html#summary-table",
-    "title": "Palmer Penguins Explorer",
-    "section": "Summary Table",
-    "text": "Summary Table\n\n\nSpecies Averages\n\n\n\n\nCode\npenguins |&gt;\n  filter(!is.na(body_mass_g)) |&gt;\n  group_by(species) |&gt;\n  summarise(\n    Count = n(),\n    `Mean Body Mass (g)` = round(mean(body_mass_g), 0),\n    `Mean Flipper Length (mm)` = round(mean(flipper_length_mm, na.rm = TRUE), 1),\n    `Mean Bill Length (mm)` = round(mean(bill_length_mm, na.rm = TRUE), 1),\n    `Mean Bill Depth (mm)` = round(mean(bill_depth_mm, na.rm = TRUE), 1)\n  ) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = \"Penguin Species Summary\",\n    subtitle = \"Averages across all islands\"\n  ) |&gt;\n  cols_label(species = \"Species\") |&gt;\n  tab_source_note(\"Source: palmerpenguins R package\")\n\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\nPenguin Species Summary\n\n\nAverages across all islands\n\n\nSpecies\nCount\nMean Body Mass (g)\nMean Flipper Length (mm)\nMean Bill Length (mm)\nMean Bill Depth (mm)\n\n\n\n\nAdelie\n151\n3701\n190.0\n38.8\n18.3\n\n\nChinstrap\n68\n3733\n195.8\n48.8\n18.4\n\n\nGentoo\n123\n5076\n217.2\n47.5\n15.0\n\n\n\nSource: palmerpenguins R package"
-  },
-  {
-    "objectID": "penguins.html#details-by-island",
-    "href": "penguins.html#details-by-island",
-    "title": "Palmer Penguins Explorer",
-    "section": "Details by Island",
-    "text": "Details by Island\n\nBiscoeDreamTorgersen\n\n\n\n\nCode\npenguins |&gt;\n  filter(island == \"Biscoe\") |&gt;\n  ggplot(aes(x = species, y = body_mass_g, fill = species)) +\n  geom_boxplot(alpha = 0.7, show.legend = FALSE) +\n  scale_fill_manual(values = c(\"darkorange\", \"cyan4\")) +\n  labs(x = NULL, y = \"Body Mass (g)\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\npenguins |&gt;\n  filter(island == \"Dream\") |&gt;\n  ggplot(aes(x = species, y = body_mass_g, fill = species)) +\n  geom_boxplot(alpha = 0.7, show.legend = FALSE) +\n  scale_fill_manual(values = c(\"darkorange\", \"purple\")) +\n  labs(x = NULL, y = \"Body Mass (g)\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\npenguins |&gt;\n  filter(island == \"Torgersen\") |&gt;\n  ggplot(aes(x = species, y = body_mass_g, fill = species)) +\n  geom_boxplot(alpha = 0.7, show.legend = FALSE) +\n  scale_fill_manual(values = c(\"darkorange\")) +\n  labs(x = NULL, y = \"Body Mass (g)\") +\n  theme_minimal()"
-  },
-  {
-    "objectID": "penguins.html#about-the-data",
-    "href": "penguins.html#about-the-data",
-    "title": "Palmer Penguins Explorer",
-    "section": "About the Data",
-    "text": "About the Data\n\n\n\n\nData Collection Details\n\n\n\n\nThe Palmer Penguins dataset was collected by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network. The data were collected from 2007–2009 and include the following variables:\n\nspecies: Adelie, Chinstrap, or Gentoo\nisland: Biscoe, Dream, or Torgersen\nbill_length_mm: Length of the bill (mm)\nbill_depth_mm: Depth of the bill (mm)\nflipper_length_mm: Flipper length (mm)\nbody_mass_g: Body mass (g)\nsex: Male or Female\nyear: Study year (2007, 2008, or 2009)\n\nThis dataset is commonly used as an alternative to the iris dataset for data exploration and visualization examples.\n\n\n\n\n\n\nMissing Values\n\n\n\n\n\n\nCode\npenguins |&gt;\n  summarise(across(everything(), ~ sum(is.na(.)))) |&gt;\n  gt() |&gt;\n  tab_header(title = \"Missing Values per Column\")\n\n\n\n\n\n\n\n\nMissing Values per Column\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\n0\n2\n2\n2\n2\n11\n0"
-  },
-  {
-    "objectID": "shinylive.html",
-    "href": "shinylive.html",
-    "title": "Shinylive Demo",
+    "objectID": "quiz.html",
+    "href": "quiz.html",
+    "title": "Quiz Demo",
     "section": "",
-    "text": "A fully interactive Shiny app running entirely in your browser.\n\nShiny Client-side"
+    "text": "NoteLearning Objectives\n\n\n\n\nPractice writing R expressions and functions\nWork with vectors, data frames, and basic statistics\nGet immediate feedback by running your code in the browser"
   },
   {
-    "objectID": "shinylive.html#client-side-shiny-app",
-    "href": "shinylive.html#client-side-shiny-app",
-    "title": "Shinylive Demo",
-    "section": "Client-Side Shiny App",
-    "text": "Client-Side Shiny App\nThis Shiny app runs entirely in the browser via Shinylive – no server required. Use the sliders to explore how parameters affect the normal distribution.\n\n\n\nNormal Distribution Explorer\n\n\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Normal Distribution Explorer\"),\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"n\", \"Number of observations:\", min = 50, max = 1000, value = 200),\n      sliderInput(\"mean\", \"Mean:\", min = -5, max = 5, value = 0, step = 0.5),\n      sliderInput(\"sd\", \"Standard deviation:\", min = 0.5, max = 5, value = 1, step = 0.5)\n    ),\n    mainPanel(\n      plotOutput(\"histogram\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$histogram &lt;- renderPlot({\n    data &lt;- rnorm(input$n, mean = input$mean, sd = input$sd)\n    hist(data, breaks = 30, col = \"steelblue\", border = \"white\",\n         main = paste(\"n =\", input$n, \" mean =\", input$mean, \" sd =\", input$sd),\n         xlab = \"Value\")\n  })\n}\n\nshinyApp(ui, server)\n\n\n\nTry It Yourself\n\nSet the standard deviation to 0.5 and the number of observations to 1000. How does the histogram shape compare to sd = 5?\nMove the mean slider and watch how the entire distribution shifts along the x-axis."
+    "objectID": "quiz.html#knowledge-check",
+    "href": "quiz.html#knowledge-check",
+    "title": "Quiz Demo",
+    "section": "Knowledge Check",
+    "text": "Knowledge Check\nWrite your answers in the code editors below and click Run Code to check your work. Expand the answer sections if you get stuck.\n\n\nQuestion 1: Sequences\nWhat function in R creates a sequence of integers from 1 to 10?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\n1:10\n# or\nseq(1, 10)\n\n\n\n\n\n\nQuestion 2: Summary Statistics\nUsing base R, calculate the mean of the vector c(4, 8, 15, 16, 23, 42).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\nmean(c(4, 8, 15, 16, 23, 42))\n# Answer: 18\n\n\n\n\n\n\nQuestion 3: Data Frames\nCreate a data frame with two columns: name (with values “Alice”, “Bob”, “Carol”) and score (with values 90, 85, 92). Then filter to only rows where score &gt; 88.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nTipShow Answer\n\n\n\n\n\ndf &lt;- data.frame(\n  name = c(\"Alice\", \"Bob\", \"Carol\"),\n  score = c(90, 85, 92)\n)\ndf[df$score &gt; 88, ]"
+  },
+  {
+    "objectID": "webr.html",
+    "href": "webr.html",
+    "title": "WebR Demo",
+    "section": "",
+    "text": "NoteLearning Objectives\n\n\n\n\nUnderstand how WebR runs R code client-side in the browser\nPractice creating scatter plots and fitting linear models\nInterpret regression output from summary(lm(...))"
+  },
+  {
+    "objectID": "webr.html#interactive-r-in-the-browser",
+    "href": "webr.html#interactive-r-in-the-browser",
+    "title": "WebR Demo",
+    "section": "Interactive R in the Browser",
+    "text": "Interactive R in the Browser\nEdit and run the code below – it executes entirely in your browser via WebR.\n\n\n1. Generate & Plot Data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n2. Inspect the Model\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nTipTry It Yourself\n\n\n\nChange n to 500 in the first code block and re-run both cells. How does the R-squared value change with more data?"
   },
   {
     "objectID": "index.html",
@@ -67,34 +53,62 @@
     "href": "index.html#test-pages",
     "title": "Quarto LMS Testing",
     "section": "Test Pages",
-    "text": "Test Pages\n\n\n\n\n\n\nPalmer Penguins Explorer\n\n\nStatic R output with ggplot2 plots, gt summary tables, and Bootstrap tabsets.\n\nStatic R ggplot2 gt\n\n\n\n\n\n\n\n\n\nWebR Demo\n\n\nRun and edit R code directly in the browser – no server or installation needed.\n\nInteractive WebR\n\n\n\n\n\n\n\n\n\nShinylive Demo\n\n\nA fully client-side Shiny app with reactive sliders and live plots.\n\nShiny Client-side\n\n\n\n\n\n\n\n\n\nQuiz Demo\n\n\nInteractive knowledge checks with live code editors and collapsible answers.\n\nQuiz WebR"
+    "text": "Test Pages\n\nPalmer Penguins Explorer – Static R output with ggplot2 plots, gt summary tables, and Bootstrap tabsets.\nWebR Demo – Run and edit R code directly in the browser, no server or installation needed.\nShinylive Demo – A fully client-side Shiny app with reactive sliders and live plots.\nQuiz Demo – Interactive knowledge checks with live code editors and collapsible answers.\nRunning Code in Posit Workbench – Video walkthrough of running R and Python code and managing jobs in Posit Workbench."
   },
   {
-    "objectID": "webr.html",
-    "href": "webr.html",
-    "title": "WebR Demo",
+    "objectID": "shinylive.html",
+    "href": "shinylive.html",
+    "title": "Shinylive Demo",
     "section": "",
-    "text": "Write and run R code directly in your browser – no installation required.\n\nInteractive WebR"
+    "text": "NoteLearning Objectives\n\n\n\n\nSee how Shiny apps can run without a server using Shinylive\nExplore how reactive inputs (sliders) update outputs (plots) in real time\nObserve the effect of sample size, mean, and standard deviation on a distribution"
   },
   {
-    "objectID": "webr.html#interactive-r-in-the-browser",
-    "href": "webr.html#interactive-r-in-the-browser",
-    "title": "WebR Demo",
-    "section": "Interactive R in the Browser",
-    "text": "Interactive R in the Browser\nEdit and run the code below – it executes entirely in your browser via WebR.\n\n\n1 Generate & Plot Data\n\n\nScatter Plot with Regression Line\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n2 Inspect the Model\n\n\nRegression Summary\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry It Yourself\nChange n to 500 in the first code block and re-run both cells. How does the R-squared value change with more data?"
+    "objectID": "shinylive.html#client-side-shiny-app",
+    "href": "shinylive.html#client-side-shiny-app",
+    "title": "Shinylive Demo",
+    "section": "Client-Side Shiny App",
+    "text": "Client-Side Shiny App\nThis Shiny app runs entirely in the browser via Shinylive – no server required. Use the sliders to explore how parameters affect the normal distribution.\n\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 500\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  titlePanel(\"Normal Distribution Explorer\"),\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"n\", \"Number of observations:\", min = 50, max = 1000, value = 200),\n      sliderInput(\"mean\", \"Mean:\", min = -5, max = 5, value = 0, step = 0.5),\n      sliderInput(\"sd\", \"Standard deviation:\", min = 0.5, max = 5, value = 1, step = 0.5)\n    ),\n    mainPanel(\n      plotOutput(\"histogram\")\n    )\n  )\n)\n\nserver &lt;- function(input, output) {\n  output$histogram &lt;- renderPlot({\n    data &lt;- rnorm(input$n, mean = input$mean, sd = input$sd)\n    hist(data, breaks = 30, col = \"steelblue\", border = \"white\",\n         main = paste(\"n =\", input$n, \" mean =\", input$mean, \" sd =\", input$sd),\n         xlab = \"Value\")\n  })\n}\n\nshinyApp(ui, server)\n\n\n\n\n\n\nTipTry It Yourself\n\n\n\n\nSet the standard deviation to 0.5 and the number of observations to 1000. How does the histogram shape compare to sd = 5?\nMove the mean slider and watch how the entire distribution shifts along the x-axis."
   },
   {
-    "objectID": "quiz.html",
-    "href": "quiz.html",
-    "title": "Quiz Demo",
+    "objectID": "penguins.html",
+    "href": "penguins.html",
+    "title": "Palmer Penguins Explorer",
     "section": "",
-    "text": "Test your R knowledge with interactive coding challenges.\n\nQuiz WebR"
+    "text": "NoteLearning Objectives\n\n\n\n\nVisualize relationships between penguin body measurements\nCompare species distributions across islands using plots and tables\nExplore grouped summaries with interactive tabsets\nCode\nlibrary(palmerpenguins)\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(gt)"
   },
   {
-    "objectID": "quiz.html#knowledge-check",
-    "href": "quiz.html#knowledge-check",
-    "title": "Quiz Demo",
-    "section": "Knowledge Check",
-    "text": "Knowledge Check\nWrite your answers in the code editors below and click Run Code to check your work. Expand the answer accordion if you get stuck.\n\n\n1 Sequences\n\n\nQuestion 1\n\n\nWhat function in R creates a sequence of integers from 1 to 10?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nShow Answer\n\n\n\n\n1:10\n# or\nseq(1, 10)\n\n\n\n\n\n\n\n\n\n2 Summary Statistics\n\n\nQuestion 2\n\n\nUsing base R, calculate the mean of the vector c(4, 8, 15, 16, 23, 42).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nShow Answer\n\n\n\n\nmean(c(4, 8, 15, 16, 23, 42))\n# Answer: 18\n\n\n\n\n\n\n\n\n\n3 Data Frames\n\n\nQuestion 3\n\n\nCreate a data frame with two columns: name (with values “Alice”, “Bob”, “Carol”) and score (with values 90, 85, 92). Then filter to only rows where score &gt; 88.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nShow Answer\n\n\n\n\ndf &lt;- data.frame(\n  name = c(\"Alice\", \"Bob\", \"Carol\"),\n  score = c(90, 85, 92)\n)\ndf[df$score &gt; 88, ]"
+    "objectID": "penguins.html#overview",
+    "href": "penguins.html#overview",
+    "title": "Palmer Penguins Explorer",
+    "section": "Overview",
+    "text": "Overview\nThe Palmer Penguins dataset contains measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica."
+  },
+  {
+    "objectID": "penguins.html#scatter-plot",
+    "href": "penguins.html#scatter-plot",
+    "title": "Palmer Penguins Explorer",
+    "section": "Scatter Plot",
+    "text": "Scatter Plot\n\n\nCode\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species, shape = species)) +\n  geom_point(size = 2.5, alpha = 0.7) +\n  scale_color_manual(values = c(\"darkorange\", \"purple\", \"cyan4\")) +\n  labs(\n    x = \"Flipper Length (mm)\",\n    y = \"Body Mass (g)\",\n    color = \"Species\",\n    shape = \"Species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\nFigure 1: Flipper length vs. body mass by species"
+  },
+  {
+    "objectID": "penguins.html#summary-table",
+    "href": "penguins.html#summary-table",
+    "title": "Palmer Penguins Explorer",
+    "section": "Summary Table",
+    "text": "Summary Table\n\n\nCode\npenguins |&gt;\n  filter(!is.na(body_mass_g)) |&gt;\n  group_by(species) |&gt;\n  summarise(\n    Count = n(),\n    `Mean Body Mass (g)` = round(mean(body_mass_g), 0),\n    `Mean Flipper Length (mm)` = round(mean(flipper_length_mm, na.rm = TRUE), 1),\n    `Mean Bill Length (mm)` = round(mean(bill_length_mm, na.rm = TRUE), 1),\n    `Mean Bill Depth (mm)` = round(mean(bill_depth_mm, na.rm = TRUE), 1)\n  ) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = \"Penguin Species Summary\",\n    subtitle = \"Averages across all islands\"\n  ) |&gt;\n  cols_label(species = \"Species\") |&gt;\n  tab_source_note(\"Source: palmerpenguins R package\")\n\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\nPenguin Species Summary\n\n\nAverages across all islands\n\n\nSpecies\nCount\nMean Body Mass (g)\nMean Flipper Length (mm)\nMean Bill Length (mm)\nMean Bill Depth (mm)\n\n\n\n\nAdelie\n151\n3701\n190.0\n38.8\n18.3\n\n\nChinstrap\n68\n3733\n195.8\n48.8\n18.4\n\n\nGentoo\n123\n5076\n217.2\n47.5\n15.0\n\n\n\nSource: palmerpenguins R package"
+  },
+  {
+    "objectID": "penguins.html#details-by-island",
+    "href": "penguins.html#details-by-island",
+    "title": "Palmer Penguins Explorer",
+    "section": "Details by Island",
+    "text": "Details by Island\n\nBiscoeDreamTorgersen\n\n\n\n\nCode\npenguins |&gt;\n  filter(island == \"Biscoe\") |&gt;\n  ggplot(aes(x = species, y = body_mass_g, fill = species)) +\n  geom_boxplot(alpha = 0.7, show.legend = FALSE) +\n  scale_fill_manual(values = c(\"darkorange\", \"cyan4\")) +\n  labs(x = NULL, y = \"Body Mass (g)\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\npenguins |&gt;\n  filter(island == \"Dream\") |&gt;\n  ggplot(aes(x = species, y = body_mass_g, fill = species)) +\n  geom_boxplot(alpha = 0.7, show.legend = FALSE) +\n  scale_fill_manual(values = c(\"darkorange\", \"purple\")) +\n  labs(x = NULL, y = \"Body Mass (g)\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\npenguins |&gt;\n  filter(island == \"Torgersen\") |&gt;\n  ggplot(aes(x = species, y = body_mass_g, fill = species)) +\n  geom_boxplot(alpha = 0.7, show.legend = FALSE) +\n  scale_fill_manual(values = c(\"darkorange\")) +\n  labs(x = NULL, y = \"Body Mass (g)\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "penguins.html#about-the-data",
+    "href": "penguins.html#about-the-data",
+    "title": "Palmer Penguins Explorer",
+    "section": "About the Data",
+    "text": "About the Data\n\n\n\n\n\n\nTipData Collection Details\n\n\n\n\n\nThe Palmer Penguins dataset was collected by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network. The data were collected from 2007–2009 and include the following variables:\n\nspecies: Adelie, Chinstrap, or Gentoo\nisland: Biscoe, Dream, or Torgersen\nbill_length_mm: Length of the bill (mm)\nbill_depth_mm: Depth of the bill (mm)\nflipper_length_mm: Flipper length (mm)\nbody_mass_g: Body mass (g)\nsex: Male or Female\nyear: Study year (2007, 2008, or 2009)\n\nThis dataset is commonly used as an alternative to the iris dataset for data exploration and visualization examples.\n\n\n\n\n\n\n\n\n\nTipMissing Values\n\n\n\n\n\n\n\nCode\npenguins |&gt;\n  summarise(across(everything(), ~ sum(is.na(.)))) |&gt;\n  gt() |&gt;\n  tab_header(title = \"Missing Values per Column\")\n\n\n\n\n\n\n\n\nMissing Values per Column\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\n0\n2\n2\n2\n2\n11\n0"
   }
 ]

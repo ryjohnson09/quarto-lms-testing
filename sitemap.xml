@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ryjohnson09.github.io/quarto-lms-testing/penguins.html</loc>
-    <lastmod>2026-02-15T01:42:03.814Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryjohnson09.github.io/quarto-lms-testing/shinylive.html</loc>
-    <lastmod>2026-02-15T01:42:03.815Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryjohnson09.github.io/quarto-lms-testing/index.html</loc>
-    <lastmod>2026-02-15T01:42:03.814Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ryjohnson09.github.io/quarto-lms-testing/webr.html</loc>
-    <lastmod>2026-02-15T01:42:03.815Z</lastmod>
+    <loc>https://ryjohnson09.github.io/quarto-lms-testing/video.html</loc>
+    <lastmod>2026-02-16T13:44:08.118Z</lastmod>
   </url>
   <url>
     <loc>https://ryjohnson09.github.io/quarto-lms-testing/quiz.html</loc>
-    <lastmod>2026-02-15T01:42:03.814Z</lastmod>
+    <lastmod>2026-02-16T13:44:08.116Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryjohnson09.github.io/quarto-lms-testing/webr.html</loc>
+    <lastmod>2026-02-16T13:44:08.118Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryjohnson09.github.io/quarto-lms-testing/index.html</loc>
+    <lastmod>2026-02-16T13:44:08.116Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryjohnson09.github.io/quarto-lms-testing/shinylive.html</loc>
+    <lastmod>2026-02-16T13:44:08.118Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ryjohnson09.github.io/quarto-lms-testing/penguins.html</loc>
+    <lastmod>2026-02-16T13:44:08.116Z</lastmod>
   </url>
 </urlset>

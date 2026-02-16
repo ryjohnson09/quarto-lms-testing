@@ -36,14 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-96cf71f8a821045f18cdd15ab4f392a5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7f6c78d74bb938728e1d5ef88acfd284.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-96cf71f8a821045f18cdd15ab4f392a5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2cc47fd1d7d0cac7d51aaf25145a1f35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-2cc47fd1d7d0cac7d51aaf25145a1f35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-2cc47fd1d7d0cac7d51aaf25145a1f35.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9195fa1a9c736cb8c2994c5df3058328.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -1626,7 +1622,6 @@ globalThis.qwebrExecuteCode = async function (
 </script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="quarto-light">
@@ -1641,11 +1636,10 @@ globalThis.qwebrExecuteCode = async function (
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#webr-demo" id="toc-webr-demo" class="nav-link active" data-scroll-target="#webr-demo">WebR Demo</a></li>
-  <li><a href="#interactive-r-in-the-browser" id="toc-interactive-r-in-the-browser" class="nav-link" data-scroll-target="#interactive-r-in-the-browser">Interactive R in the Browser</a>
+  <li><a href="#interactive-r-in-the-browser" id="toc-interactive-r-in-the-browser" class="nav-link active" data-scroll-target="#interactive-r-in-the-browser">Interactive R in the Browser</a>
   <ul class="collapse">
-  <li><a href="#generate-plot-data" id="toc-generate-plot-data" class="nav-link" data-scroll-target="#generate-plot-data"><span class="step-number">1</span> Generate &amp; Plot Data</a></li>
-  <li><a href="#inspect-the-model" id="toc-inspect-the-model" class="nav-link" data-scroll-target="#inspect-the-model"><span class="step-number">2</span> Inspect the Model</a></li>
+  <li><a href="#generate-plot-data" id="toc-generate-plot-data" class="nav-link" data-scroll-target="#generate-plot-data">1. Generate &amp; Plot Data</a></li>
+  <li><a href="#inspect-the-model" id="toc-inspect-the-model" class="nav-link" data-scroll-target="#inspect-the-model">2. Inspect the Model</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1940,6 +1934,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">WebR Demo</h1>
+<p class="subtitle lead">Write and run R code directly in your browser – no installation required.</p>
 </div>
 
 
@@ -1956,53 +1951,50 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="webr-demo" class="level1 lesson-hero">
-<h1>WebR Demo</h1>
-<div class="lead">
-<p>Write and run R code directly in your browser – no installation required.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p><span class="badge-feature badge-interactive">Interactive</span> <span class="badge-feature badge-interactive">WebR</span></p>
-</section>
-<section id="learning-objectives" class="level4 learning-objectives">
-<h4 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h4>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
 <li>Understand how WebR runs R code client-side in the browser</li>
 <li>Practice creating scatter plots and fitting linear models</li>
 <li>Interpret regression output from <code>summary(lm(...))</code></li>
 </ul>
-</section>
+</div>
+</div>
 <section id="interactive-r-in-the-browser" class="level2">
 <h2 class="anchored" data-anchor-id="interactive-r-in-the-browser">Interactive R in the Browser</h2>
 <p>Edit and run the code below – it executes entirely in your browser via <a href="https://docs.r-wasm.org/webr/latest/">WebR</a>.</p>
-<hr class="section-divider">
+<hr>
 <section id="generate-plot-data" class="level3">
-<h3 class="anchored" data-anchor-id="generate-plot-data"><span class="step-number">1</span> Generate &amp; Plot Data</h3>
-<div class="card">
-<div class="card-header">
-Scatter Plot with Regression Line
-</div>
-<div class="card-body">
+<h3 class="anchored" data-anchor-id="generate-plot-data">1. Generate &amp; Plot Data</h3>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</div>
-</div>
-<hr class="section-divider">
+<hr>
 </section>
 <section id="inspect-the-model" class="level3">
-<h3 class="anchored" data-anchor-id="inspect-the-model"><span class="step-number">2</span> Inspect the Model</h3>
-<div class="card">
-<div class="card-header">
-Regression Summary
-</div>
-<div class="card-body">
+<h3 class="anchored" data-anchor-id="inspect-the-model">2. Inspect the Model</h3>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Try It Yourself
 </div>
 </div>
-<section id="try-it-yourself" class="level4 try-it">
-<h4 class="anchored" data-anchor-id="try-it-yourself">Try It Yourself</h4>
+<div class="callout-body-container callout-body">
 <p>Change <code>n</code> to <code>500</code> in the first code block and re-run both cells. How does the R-squared value change with more data?</p>
-</section>
+</div>
+</div>
 
 
 </section>
